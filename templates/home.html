@@ -1,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="/static/CSS/home.css">
+  </head>
+  <body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+              <h2 class="logo">CluckBox</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li><a href="{% url 'order' %}">Cart</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <!-- Logout Button -->
+                    <li id="login-button" class="visible"><a href="{% url 'login' %}">Logout</a></li>
+                    <!-- Login Button -->
+                    <li id="logout-button" class="hidden"><a href="{% url 'signup' %}">LOGIN</a></li>
+                </ul>
+            </div>
+        </div> 
+
+        <!-- Content section that changes after logout -->
+        <div class="content" id="content">
+            <h1 class="welcome-text">Welcome To<br><span class="cluckbox-text">CluckBox</span></h1>
+            <p class="par">Cloud Powered Delivery <br></p>
+            <button class="cn"><a href="{% url 'dashboard' %}">ORDER NOW</a></button>
+        </div>
+    </div>
+
+  </body>
+
+</html>

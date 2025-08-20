@@ -1,0 +1,141 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Cart Data</title>
+       <link rel="stylesheet" href="/static/CSS/order.css">
+    </head>
+<body>
+    
+    <div class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'order' %}">Cart</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <header>
+        <h1>Cart Data</h1>
+    </header>    
+      
+    <table>
+        <tr>
+            <th style="width:250px">Id</th>
+            <th>Order_Date</th>
+            <th>Order_Time</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Payment-Mode</th>
+            <th>Order</th>
+            <th>Delete</th>
+        </tr>
+
+        <tbody>
+                
+            {% comment %} {% for i in data %}
+            <tr>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <td>{{i.Date}}</td>
+                    <td>{{i.Time}}</td>
+                    <td name="type">{{i.Type}}</td>
+                    <td name="quantity">{{i.Quantity}}</td>
+                    <td name="price">{{i.Price}}</td>
+                    <td name="total">{{i.Total}}</td>
+                    <td><button class="addBtn">addOrder</button></td>
+                </form>  
+                <td><button class="deleteBtn">Delete</button></td>  
+            </tr>  
+            {% endfor %}  {% endcomment %}
+            
+            {% for i in data %}
+            <tr>
+                <form action="{% url 'order' %}" method="post">
+                    {% csrf_token %}
+                    <td><input type="text" name="id" value="{{ i.Id }}" readonly></td>
+                    <td><input type="text" name="date" value="{{ i.Date }}" readonly></td>
+                    <td><input type="text" name="time" value="{{ i.Time }}" readonly></td>
+                    <td><input type="text" name="type" value="{{ i.Type }}" readonly></td>
+                    <td><input type="number" name="quantity" value="{{ i.Quantity }}" readonly></td>
+                    <td><input type="number" name="price" value="{{ i.Price }}" readonly></td>
+                    <td><input type="number" name="total" value="{{ i.Total }}" readonly></td>
+                    {% comment %} <td><input type="radio" name="payment" value="Cash" readonly>Cash
+                        <input type="radio" name="payment" value="Online" readonly>Online
+                    </td> {% endcomment %}
+                    <td>
+                        <div class="payment-options">
+                            <div class="radio-group">
+                                <label for="cash">Cash</label>
+                                <input type="radio" id="cash" name="payment" value="Cash" readonly>
+                            </div>
+                            <div class="radio-group">
+                                <label for="online">Online</label>
+                                <input type="radio" id="online" name="payment" value="Online" readonly>
+                            </div>
+                        </div>
+                    </td>
+                    <td><button type="submit" onclick="addToOrder()" class="addBtn">Add Order</button></td> 
+                </form>
+                
+                <form action="{% url 'delete' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{ i.Id }}">  <!-- Use correct 'Id' -->
+                    <td><button type="submit" onclick="return confirmDelete()" class="deleteBtn">Delete</button></td>
+                </form>
+                
+                
+            </tr>
+            {% endfor %}
+
+        </tbody>    
+
+    </table>  
+    
+    <script>
+
+        function addToOrder(){
+            alert("Item Order Successfully");
+        }
+
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete this order?");
+        }
+        
+
+        {% comment %} function deleteOrder(event) {
+            alert("Item Remove from Cart");
+            event.preventDefault(); // Prevent form submission
+            let row = event.target.closest("tr"); // Get the closest table row
+            row.remove(); // Remove the row from the table
+        } {% endcomment %}
+
+       {% comment %} function addToOrder(button) {
+            alert("Item Order Successfully");
+            button.classList.add("clicked");
+            button.textContent = "Added"; // Change text after clicking
+            button.onclick = null; // Disable further clicks
+     
+             // Store button state in localStorage
+            localStorage.setItem("buttonClicked", "true");
+         }
+     
+         // Check localStorage on page load to restore button state
+        window.onload = function () {
+            let button = document.getElementById("orderButton");
+             if (localStorage.getItem("buttonClicked") === "true") {
+                button.classList.add("clicked");
+                button.textContent = "Added";
+                button.onclick = null;
+            }
+         }; {% endcomment %}
+               
+    </script>
+     
+</body>
+</html>    

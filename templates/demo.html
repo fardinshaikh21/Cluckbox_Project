@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Pymongo</title>
+    </head>  
+    <body>
+       <h1> User Signup Detail</h1>
+
+        <table border="1" cellpadding="10">
+           <tr>
+             <th>Id</th>
+             <th>Name</th>
+             <th>Username</th>
+             <th>Password</th>
+             <th>Email</th>
+             <th>Address</th>
+             <th>Phone_no</th>
+             <th>Area</th>
+           </tr>  
+           
+           
+           {% for i in col %}
+           <tr>
+                <td>{{i.Id}}</td>
+                <td>{{i.Name}}</td>
+                <td>{{i.Username}}</td>
+                <td>{{i.Password}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Address}}</td>
+                <td>{{i.Phone_no}}</td>
+                <td>{{i.Area}}</td>
+           </tr>
+           {% endfor %}
+       </table> 
+    </body>
+</html>        

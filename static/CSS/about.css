@@ -1,0 +1,408 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.navbar {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .menu ul {
+    margin-left: 1200px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .menu li a:hover {
+    background: rgba(52, 152, 219, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: #ffd700; /* Golden yellow color on hover */
+    font-weight: 600;
+  }
+  
+  .menu li a:active {
+    background: rgba(46, 204, 113, 0.4);
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #2ecc71; /* Green color when clicked */
+  }
+  
+  /* Add active class for clicked state */
+  .menu li a.active {
+    background: rgba(46, 204, 113, 0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #2ecc71;
+  }
+  
+
+/* About Section Styling */
+.about-section {
+    background-color: #fff;
+    padding: 100px 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    background: linear-gradient(145deg, #f4f4f4, #ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h2 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-header h2:hover {
+    color: #55956b;
+    transform: translateY(-5px);
+}
+
+.about-header p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: color 0.3s ease;
+}
+
+/* About Content Layout */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center;
+    gap: 30px;
+}
+
+/* About Image Styling */
+.about-image {
+    width: 100%; /* Full width for the image */
+    max-width: 1000px; /* Max width for the image */
+    height: auto;
+    margin-bottom: 30px; /* Space between the image and the text */
+}
+
+.about-image img {
+    width: 100%; /* Ensures image takes full container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+/* iMAGE HOVER CODE*/
+.about-image img:hover {
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+/* About Column Styling */
+.about-column {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.about-column h3 {
+    font-size: 32px;
+    color: #ff9800;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-column p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.about-column:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* About Column 1 Styling */
+.about-column1 {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.about-column1 h3 {
+    font-size: 32px;
+    color: #ff9800;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-column1 p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.about-column1:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* About Reasons Section */
+.about-reasons {
+    margin-top: 60px;
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    animation: fadeIn 1s ease-out;
+}
+
+.about-reasons h3 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.reasons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0.3s;
+}
+
+.reason-card {
+    background-color: #fff;
+    width: 30%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgb(112 55 55 / 10%);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s cubic-bezier(1, -0.84, 0, 2.68);
+    position: relative;
+    margin-bottom: 30px;
+    opacity: 0; /* Initially hidden */
+    animation: slideInCard 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.reason-card i {
+    font-size: 48px;
+    color: #ff9800;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.reason-card i:hover {
+    color: #ff5722;
+}
+
+.reason-card h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.reason-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Hover effect for reason cards */
+.reason-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for fading in and scaling the card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff9800;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-column {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-header h2 {
+        font-size: 32px;
+    }
+
+    .reason-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .reasons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .reason-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

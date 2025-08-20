@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/static/CSS/login-style.css">
+</head>
+<body>
+    <div class="form">
+
+      <form action="" method="POST">
+        <h2>LOGIN</h2>
+        {% csrf_token %}
+        <!-- Email and Password Fields -->
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        
+        <!-- Login Button -->
+        <button class="btnn">Login</button>
+      </form>
+        <!-- Sign Up Link -->
+        <p class="link">Don't have an account? <a href="{% url 'signup' %}">Sign up</a> here</p> <!-- Redirects to the sign-up page -->
+
+        <!-- Log In with Social Media -->
+        <p class="liw">Log in with</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/login" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://twitter.com/login" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://accounts.google.com/ServiceLogin" target="_blank"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="https://login.skype.com/" target="_blank"><ion-icon name="logo-skype"></ion-icon></a>
+        </div>
+     
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluckbox Dashboard</title>
+    <link rel="stylesheet" href="/static/CSS/dashboard.css">
+</head>
+<body>  
+
+    <div class="navbar">
+            
+
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'order' %}">Cart</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    <header>
+        <h1>🐔 Cluckbox Dashboard</h1>
+    </header>
+
+<section class="order-section">
+
+    <!-- Boneless Item -->
+    <div class="item-card">
+        <img src="/static/IMG/boneless1.jpg" alt="Boneless Chicken">
+        <h3>Boneless Chicken ₹400/1Kg</h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-whole">Quantity:</label>
+        <input type="number" id="quantity-whole" name="Bonless_Chicken" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Breast with Ribs Item -->
+    <div class="item-card">
+        <img src="/static/IMG/RIBS.jpeg.jpg" alt="Breast with Ribs">
+        <h3>Breast with Ribs ₹450/1Kg</h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-breast">Quantity:</label>
+        <input type="number" id="quantity-breast" name="Breast_Ribs" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Breast Quarter Item -->
+    <div class="item-card">
+        <img src="/static/IMG/leg.webp" alt="Chicken legs">
+        <h3>Chicken Legs ₹350/1Kg</h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-breast-quarter">Quantity:</label>
+        <input type="number" id="quantity-breast-quarter" name="Chicken_legs" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Leg Quarter Item -->
+    <div class="item-card">
+        <img src="/static/IMG/LEG QUARTER.jpeg.jpg" alt="Leg Quarter">
+        <h3>Leg Quarter <br>₹250/1kg</br></h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-leg">Quantity:</label>
+        <input type="number" id="quantity-leg" name="Leg_Quarter" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+
+    <!-- Whole Leg Item -->
+    <div class="item-card">
+        <img src="/static/IMG/Body.jpg" alt="Whole Leg">
+        <h3>Whole Leg <br>₹550/1Kg</br></h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-leg">Quantity:</label>
+        <input type="number" id="quantity-whole-leg" name="Whole_Legs" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+
+        <!-- Eggs item -->
+    <div class="item-card">
+        <img src="/static/IMG/eggs.jpg" alt="Whole Leg">
+        <h3>Eggs<br> ₹60/1Dozon</h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-egg">Quantity:</label>
+        <input type="number" id="quantity-whole-leg" name="Eggs" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+
+       <!--Drumstick item-->
+       <div class="item-card">
+        <img src="/static/IMG/chicken.jpg" alt="Drumstick">
+        <h3>Drumstick <br>₹360/1Kg</br></h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-Drumstick">Quantity:</label>
+        <input type="number" id="quantity-whole-leg" name="Drumstick" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+     <!--wings-->
+     <div class="item-card">
+        <img src="/static/IMG/Keema.webp" alt="--wings--">
+        <h3>Keema<br> ₹160/1Kg</h3>
+        <form action="" method="post">     
+        {% csrf_token %}
+        <label for="quantity-Wings">Quantity:</label>
+        <input type="number" id="quantity-whole-leg" name="Keema" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+
+         <!--Chicken Lollipop-->
+     <div class="item-card">
+        <img src="/static/IMG/Chicken-Lolipop.jpg" alt="Lollipop--">
+        <h3>Chicken Lollipop ₹210/1Kg</h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-Lollipop">Quantity:</label>
+        <input type="number" id="quantity-whole-leg" name="Lolipop" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+    </div>
+    
+       <!--wings-->
+      <div class="item-card">
+        <img src="/static/IMG/wings.jpeg.jpg" alt="--wings--">
+        <h3>wings<br>₹160/1Kg</h3>
+        <form action="" method="post">
+        {% csrf_token %}
+        <label for="quantity-Wings">Quantity:</label>
+        <input type="number" id="quantity-whole-leg" name="Wings" placeholder="Enter quantity" min="1">
+        <button class="btn" onclick=" addToCart()">Add to Cart</button>
+        </form>
+      </div>
+
+</section>
+
+    <script>
+
+        function addToCart(){
+            alert("Item Add to Cart");
+        }
+        
+    </script>  
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Cluckbox</title>
+    <link rel="stylesheet" href="/static/CSS/signup.css">
+</head>
+<body>
+    <div class="form">
+        <h2>Sign Up</h2>
+
+        <!-- Sign Up Form Fields -->
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" id="name" name="name" placeholder="Enter your name " required>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone no" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            <input type="text" id="area" name="area" placeholder="Enter your area" required>
+            <input type="number" id="pincode" name="pincode" placeholder="Enter your area pincode" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter your confirm password " required>
+
+            <!-- Sign Up Button -->
+            <button class="btnn" type="submit">Sign Up</button>
+        </form>
+
+        <!-- Already Have an Account Link -->
+        <p class="link">Already have an account? <a href="{% url 'login' %}">Login</a> here</p> <!-- Redirects to the login page -->
+
+        <!-- Sign Up with Social Media -->
+        <p class="liw">Sign Up with</p>
+        <div class="icons">
+            <a href="https://www.facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://accounts.google.com" target="_blank"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="https://login.skype.com" target="_blank"><ion-icon name="logo-skype"></ion-icon></a>
+        </div>
+    </div>
+
+</body>
+</html>

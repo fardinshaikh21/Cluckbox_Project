@@ -1,0 +1,299 @@
+/* Reset default styles and set up base styling
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+body {
+  background-color: #f8f9fa;
+  padding: 30px;
+  color: #333;
+}
+  
+.name{
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: aqua;
+}
+  
+table{
+  border-collapse: collapse;
+  text-align: center;
+  border: 2px solid black;
+}
+
+input{
+
+  border-style: none;
+  text-align: center;
+
+}
+
+th,td{
+  border: 2px solid black;
+}
+
+.addBtn{
+  background-color: green;
+  color: white;
+}
+
+.deleteBtn{
+  background-color: red;
+  color: black;
+} */
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu ul {
+  margin-left: 1200px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu li a:hover {
+  background: rgba(52, 152, 219, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #ffd700; /* Golden yellow color on hover */
+  font-weight: 600;
+}
+
+.menu li a:active {
+  background: rgba(46, 204, 113, 0.4);
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #2ecc71; /* Green color when clicked */
+}
+
+/* Add active class for clicked state */
+.menu li a.active {
+  background: rgba(46, 204, 113, 0.4);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #2ecc71;
+}
+
+#login-button a {
+  background: #e74c3c;
+  padding: 0.5rem 1.5rem;
+}
+
+#login-button a:hover {
+  background: #c0392b;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th {
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  color: white;
+  padding: 1.2rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* width:50%; */
+}
+/* Radio Button Container */
+.payment-options {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+/* Radio Button Group */
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Radio Button Styling */
+.radio-group input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  accent-color: #3498db;
+}
+
+/* Label Styling */
+.radio-group label {
+  font-size: 1rem;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+/* Hover effect for the entire group */
+.radio-group:hover {
+  color: #3498db;
+}
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+/* Input Styles */
+input[readonly] {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* Button Styles */
+.addBtn, .deleteBtn {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.addBtn {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  color: white;
+}
+
+.deleteBtn {
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  color: white;
+}
+
+.addBtn:hover {
+  background: linear-gradient(to right, #27ae60, #219a52);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46,204,113,0.2);
+}
+
+.deleteBtn:hover {
+  background: linear-gradient(to right, #c0392b, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231,76,60,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+  }
+  
+  table {
+      width: 95%;
+      overflow-x: auto;
+      display: block;
+  }
+  
+  th, td {
+      padding: 0.8rem;
+  }
+  
+  .addBtn, .deleteBtn {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+  }
+  
+  header h1 {
+      font-size: 2rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+tbody tr {
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: calc(var(--row-index, 0) * 0.1s);
+}
