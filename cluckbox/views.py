@@ -27,7 +27,7 @@ def login(request):
 
         if email==Email and password==Password:
             request.session['email'] = email
-            return render(request,"home.html")
+            return render(request,"index.html")
         else:
             return HttpResponse("Email or Password Incorrect")
         
@@ -61,7 +61,7 @@ def signup(request):
     return render(request,"signup.html")
 
 def home(request):
-    return render(request,"home.html")
+    return render(request,"index.html")
 
 
 def dashboard(request):
